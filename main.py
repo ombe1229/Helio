@@ -23,6 +23,11 @@ class MainWindow(QMainWindow):
                 self.dragPos = event.globalPos()
                 event.accept()
 
+        def Maximum(event: QMouseEvent):
+            UIFunctions.maximize_restore(self)
+            event.accept()
+
+        self.ui.title_bar.mouseDoubleClickEvent = Maximum
         self.ui.title_bar.mouseMoveEvent = moveWindow
 
         UIFunctions.uiDefinitions(self)
