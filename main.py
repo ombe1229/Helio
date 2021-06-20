@@ -1,5 +1,6 @@
 import sys
-from PySide2.QtGui import QMouseEvent, QKeyEvent
+from PySide2.QtCore import QSize
+from PySide2.QtGui import QIcon, QMouseEvent, QKeyEvent
 from PySide2.QtWidgets import QApplication, QMainWindow
 
 
@@ -25,6 +26,10 @@ class MainWindow(QMainWindow):
         self.ui.title_bar.mouseMoveEvent = moveWindow
 
         UIFunctions.uiDefinitions(self)
+
+        self.setMinimumSize(QSize(500, 400))
+        self.setWindowIcon(QIcon("saebasol.icon.png"))
+        self.setWindowTitle("Helio")
 
         self.show()
 
