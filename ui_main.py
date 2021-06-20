@@ -17,7 +17,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(752, 549)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.drop_shadow_layout = QVBoxLayout(self.centralwidget)
@@ -133,6 +133,47 @@ class Ui_MainWindow(object):
 "")
         self.content_bar.setFrameShape(QFrame.StyledPanel)
         self.content_bar.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.content_bar)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.frame_menu = QFrame(self.content_bar)
+        self.frame_menu.setObjectName(u"frame_menu")
+        self.frame_menu.setMinimumSize(QSize(60, 0))
+        self.frame_menu.setMaximumSize(QSize(60, 16777215))
+        self.frame_menu.setStyleSheet(u"background-color: rgb(27, 29, 34);")
+        self.frame_menu.setFrameShape(QFrame.StyledPanel)
+        self.frame_menu.setFrameShadow(QFrame.Raised)
+
+        self.horizontalLayout_4.addWidget(self.frame_menu)
+
+        self.frame_page_content = QFrame(self.content_bar)
+        self.frame_page_content.setObjectName(u"frame_page_content")
+        self.frame_page_content.setFrameShape(QFrame.StyledPanel)
+        self.frame_page_content.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_4 = QVBoxLayout(self.frame_page_content)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.label_title_2 = QLabel(self.frame_page_content)
+        self.label_title_2.setObjectName(u"label_title_2")
+        self.label_title_2.setMinimumSize(QSize(360, 50))
+        self.label_title_2.setMaximumSize(QSize(16777215, 50))
+        font1 = QFont()
+        font1.setFamily(u"Noto Sans CJK KR Black")
+        font1.setPointSize(30)
+        self.label_title_2.setFont(font1)
+        self.label_title_2.setStyleSheet(u"color: rgb(236, 240, 241);")
+        self.label_title_2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_4.addWidget(self.label_title_2)
+
+        self.frame = QFrame(self.frame_page_content)
+        self.frame.setObjectName(u"frame")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_4.addWidget(self.frame)
+
+
+        self.horizontalLayout_4.addWidget(self.frame_page_content)
+
 
         self.verticalLayout.addWidget(self.content_bar)
 
@@ -156,10 +197,10 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setContentsMargins(15, 0, 0, 0)
         self.label_credits = QLabel(self.frame_label_credits)
         self.label_credits.setObjectName(u"label_credits")
-        font1 = QFont()
-        font1.setFamily(u"Noto Sans CJK KR Medium")
-        font1.setPointSize(8)
-        self.label_credits.setFont(font1)
+        font2 = QFont()
+        font2.setFamily(u"Noto Sans CJK KR Medium")
+        font2.setPointSize(8)
+        self.label_credits.setFont(font2)
         self.label_credits.setStyleSheet(u"color: rgb(129, 129, 129)")
 
         self.verticalLayout_3.addWidget(self.label_credits)
@@ -196,6 +237,7 @@ class Ui_MainWindow(object):
         self.btn_maxmize.setText("")
         self.btn_minimize.setText("")
         self.btn_close.setText("")
+        self.label_title_2.setText(QCoreApplication.translate("MainWindow", u"About Heliotrope", None))
         self.label_credits.setText(QCoreApplication.translate("MainWindow", u"From Heliotrope", None))
     # retranslateUi
 
