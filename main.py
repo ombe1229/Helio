@@ -27,7 +27,6 @@ class MainWindow(QMainWindow):
 
         UIFunctions.uiDefinitions(self)
 
-        self.setMinimumSize(QSize(500, 400))
         self.setWindowIcon(QIcon("saebasol.icon.png"))
         self.setWindowTitle("Helio")
 
